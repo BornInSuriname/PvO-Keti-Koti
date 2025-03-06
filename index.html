@@ -12,23 +12,42 @@
         <h1>PvO Keti Koti</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Over Ons</a></li>
-                <li><a href="goals.html">Doelen</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">Over Ons</a></li>
+                <li><a href="#goals">Doelen</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hidden">
         <h2>Herdenken. Reflecteren. Vier Vrijheid.</h2>
         <p>Ontdek de geschiedenis en vier Keti Koti met ons.</p>
         <a href="about.html" class="cta-button">Meer over ons</a>
     </section>
 
+    <section id="about" class="hidden">
+        <h2>Over Ons</h2>
+        <p>PvO Keti Koti zet zich in voor de herdenking van de afschaffing van de slavernij en het vieren van vrijheid.</p>
+    </section>
+
+    <section id="goals" class="hidden">
+        <h2>Onze Doelen</h2>
+        <ul>
+            <li>Bewustwording vergroten</li>
+            <li>Evenementen organiseren</li>
+            <li>Educatie bevorderen</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="hidden">
+        <h2>Contact</h2>
+        <p>Neem contact met ons op via e-mail: info@pvo-ketikoti.nl</p>
+    </section>
+
     <footer>
-        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
+        <p>&copy; <span id="year"></span> PvO Keti Koti. Alle rechten voorbehouden.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
