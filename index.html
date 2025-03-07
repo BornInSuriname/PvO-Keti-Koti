@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PvO Keti Koti: Bewustwording van het slavernijverleden en viering van vrijheid.">
-    <meta name="keywords" content="Keti Koti, GVB, slavernij, inclusiviteit, personeelsvereniging">
-    <title>PvO Keti Koti - Vrijheid en Verbondenheid</title>
+    <meta name="description" content="PvO Keti Koti is een Comité binnen het GVB die zich inzet voor bewustwording over de trans-Atlantische slavernij en inclusiviteit bevordert.">
+    <meta name="keywords" content="Keti Koti, GVB, slavernij, inclusiviteit, Comité">
+    <title>PvO Keti Koti - Hoofdpagina</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,33 +17,44 @@
             <p>Vrijheid, Gelijkwaardigheid, Verbondenheid</p>
         </div>
     </header>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="wie-zijn-wij.html">Wie zijn wij</a>
-        <a href="waarom-keti-koti.html">Waarom Keti Koti</a>
-        <a href="hoe-kan-jij-helpen.html">Hoe kan jij helpen?</a>
-        <a href="initiatieven.html">Initiatieven</a>
-        <a href="contact.html">Contact</a>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wie-zijn-wij.html">Wie zijn wij</a></li>
+            <li><a href="waarom-keti-koti.html">Waarom Keti Koti</a></li>
+            <li><a href="hoe-kan-jij-helpen.html">Hoe kan jij helpen?</a></li>
+            <li><a href="initiatieven.html">Initiatieven</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <div class="hero">
-        <video autoplay muted loop class="hero-video">
-            <source src="images/hero-video.mp4" type="video/mp4">
-        </video>
+
+    <div class="hero" role="img" aria-label="Traditionele Keti Koti-viering in Suriname">
         <div class="hero-text">
             <h2>Bewustwording en erkenning van het verleden</h2>
             <p>Ontdek onze missie en vier vrijheid met ons.</p>
         </div>
     </div>
+
     <div class="content">
         <div class="section fade-in">
             <h2>Welkom bij PvO Keti Koti</h2>
-            <p>Wij zijn een personeelsvereniging binnen het GVB die zich inzet voor bewustwording over de trans-Atlantische slavernij en inclusiviteit bevordert.</p>
-            <a href="wie-zijn-wij.html" class="button">Lees meer</a>
+            <p>PvO Keti Koti is een Comité binnen het GVB die zich inzet voor bewustwording over de trans-Atlantische slavernij en inclusiviteit bevordert. Ontdek meer over ons werk en hoe je kunt helpen.</p>
+            <a href="wie-zijn-wij.html" class="button">Lees meer over ons</a>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
         <p><a href="privacybeleid.html">Privacybeleid</a> | <a href="disclaimer.html">Disclaimer</a></p>
     </footer>
+
+    <script>
+        // Script voor hamburgermenu
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
