@@ -1,0 +1,165 @@
+/* Algemene stijlen */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f4e3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007749;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    animation: fadeIn 1.5s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+    background-color: #CE1126;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD100;
+}
+
+.hero {
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s;
+}
+
+.hero-text {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+.content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #007749;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #CE1126;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #FFD100;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer a {
+    color: #FFD100;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #CE1126;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsieve stijlen */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+        font-size: 30px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+}
