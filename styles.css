@@ -1,4 +1,14 @@
-/* Achtergrond met overlay */
+/* Algemene stijlen */
+body {
+    background: url('images/logo_pvo2.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -10,24 +20,11 @@ body::before {
     z-index: -1;
 }
 
-body {
-    background: url('images/logo_pvo2.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
-
-/* Overige stijlen */
 header {
     background-color: #007749;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     font-size: 32px;
     font-family: 'Playfair Display', serif;
     animation: fadeIn 1.5s;
@@ -45,13 +42,13 @@ header p {
 
 nav {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #CE1126;
 }
 
 nav a {
     color: white;
-    margin: 0 20px;
+    margin: 0 15px;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -65,13 +62,13 @@ nav a:hover {
     background-image: url('images/hero-image.jpg');
     background-size: cover;
     background-position: center;
-    height: 500px;
-    min-height: 300px;
+    height: 400px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     animation: fadeIn 2s;
@@ -85,22 +82,22 @@ nav a:hover {
 }
 
 .hero-text h2 {
-    font-size: 48px;
+    font-size: 36px;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0 0;
 }
 
 .content {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .section {
-    padding: 40px;
+    padding: 30px;
     margin: 20px auto;
     max-width: 800px;
     background: white;
@@ -193,10 +190,38 @@ footer a:hover {
 }
 
 /* Responsieve stijlen */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /* Tablet */
     .hero {
         height: 300px;
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobiel */
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
     }
 
     nav a {
@@ -204,8 +229,21 @@ footer a:hover {
         font-size: 16px;
     }
 
+    .hero {
+        height: 250px;
+        font-size: 24px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
     .section {
-        padding: 20px;
+        padding: 15px;
     }
 
     .contact-buttons {
