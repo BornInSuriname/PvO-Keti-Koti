@@ -1,199 +1,119 @@
-/* Algemene stijlen */
+/* styles.css */
+:root {
+    --primary-color: #007749;  /* Diepgroen */
+    --secondary-color: #CE1126; /* Krachtig rood */
+    --accent-color: #FFD100;    /* Gouden accent */
+}
+
+/* Culturele achtergrond */
 body {
-    background: url('images/logo_pvo2.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    background: linear-gradient(rgba(255,255,255,0.9), 
+                url('images/patterns/african-heritage.png');
+    font-family: 'Raleway', sans-serif;
 }
 
-body::before {
-    content: '';
-    position: fixed;
+/* Dynamische navigatie */
+.dynamic-nav {
+    background: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Witte overlay met 80% dekking */
-    z-index: -1;
+    z-index: 1000;
 }
 
-/* Header */
-header {
-    background-color: #007749;
+.dynamic-nav a {
     color: white;
-    text-align: center;
-    padding: 50px 20px;
-    font-size: 32px;
-    font-family: 'Playfair Display', serif;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 48px;
+.dynamic-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s;
 }
 
-header p {
-    margin: 10px 0 0;
-    font-size: 20px;
+.dynamic-nav a:hover::after {
+    width: 70%;
 }
 
-/* Navigatie */
-nav {
-    text-align: center;
-    background-color: #CE1126;
-    padding: 15px;
+/* Interactieve galerij */
+.interactive-gallery {
+    padding: 4rem 2rem;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #FFD100;
-}
-
-/* Hamburgermenu voor mobiel */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        text-align: center;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #CE1126;
-        width: 100%;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-}
-
-/* Hero-sectie */
-.hero {
-    background-image: url('images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.hero-text {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.hero-text h2 {
-    font-size: 36px;
-}
-
-.hero-text p {
-    font-size: 20px;
-}
-
-/* Content */
-.content {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.section {
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: white;
+.gallery-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.section:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+.gallery-item:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Knoppen */
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #CE1126;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #FFD100;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.culture-overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 119, 73, 0.9));
     width: 100%;
+    padding: 1rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-footer a {
-    color: #FFD100;
-    text-decoration: none;
+.gallery-item:hover .culture-overlay {
+    opacity: 1;
 }
 
-footer a:hover {
-    color: #CE1126;
+/* Moderne contactknoppen */
+.modern-contact {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s ease;
 }
 
-/* Animaties */
+.modern-contact:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dynamic-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
+.fade-in-section {
+    animation: fadeIn 0.8s ease-out;
 }
