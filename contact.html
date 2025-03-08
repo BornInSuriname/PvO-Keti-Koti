@@ -3,47 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Neem contact op met PvO Keti Koti via e-mail of WhatsApp.">
-    <meta name="keywords" content="contact, e-mail, WhatsApp, PvO Keti Koti">
     <title>Contact - PvO Keti Koti</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>PvO Keti Koti</h1>
-            <p>Vrijheid, Gelijkwaardigheid, Verbondenheid</p>
-        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="wie-zijn-wij.html">Wie zijn wij</a>
-        <a href="waarom-keti-koti.html">Waarom Keti Koti</a>
-        <a href="hoe-kan-jij-helpen.html">Hoe kan jij helpen?</a>
-        <a href="initiatieven.html">Initiatieven</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="content">
-        <div class="section fade-in">
-            <h2>Contact</h2>
-            <p>Neem contact met ons op voor meer informatie. We zijn bereikbaar via e-mail en WhatsApp.</p>
-            <div class="contact-buttons">
-                <a href="mailto:info@pvoketikoti.nl" class="contact-button email-button">
-                    <img src="images/icons/email-icon.svg" alt="E-mail">
-                    Stuur een e-mail
-                </a>
-                <a href="https://wa.me/31612345678" class="contact-button whatsapp-button" target="_blank">
-                    <img src="images/icons/whatsapp-icon.svg" alt="WhatsApp">
-                    Chat via WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
+    <section>
+        <h2>Contact</h2>
+        <p>Neem contact met ons op voor vragen, suggesties of samenwerkingen.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Naam" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="message" placeholder="Bericht" required></textarea>
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2025 PvO Keti Koti. Alle rechten voorbehouden.</p>
-        <p><a href="privacybeleid.html">Privacybeleid</a> | <a href="disclaimer.html">Disclaimer</a></p>
+        <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
     </footer>
 </body>
 </html>
