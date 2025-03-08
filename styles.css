@@ -46,6 +46,16 @@ nav {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.logo img {
+    height: 50px; /* Pas de hoogte aan naar wens */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
 .menu-toggle {
     font-size: 24px;
     cursor: pointer;
@@ -57,6 +67,7 @@ nav {
 .nav-links {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -136,6 +147,10 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .logo img {
+        height: 40px; /* Kleinere logo voor mobiel */
     }
 }
 
