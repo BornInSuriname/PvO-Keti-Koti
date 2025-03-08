@@ -1,18 +1,19 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #ff0000, #ffcc00, #008000);
+    background: linear-gradient(135deg, #8B0000, #FFD700, #006400);
     color: #fff;
     margin: 0;
     padding: 0;
     text-align: center;
     overflow-x: hidden;
 }
+
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ffcc00, #ff9900);
+    background: linear-gradient(90deg, #FFD700, #FF8C00);
     padding: 15px;
     z-index: 1000;
     display: flex;
@@ -20,6 +21,7 @@ nav {
     align-items: center;
     box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
 }
+
 .menu-toggle {
     font-size: 24px;
     cursor: pointer;
@@ -27,10 +29,12 @@ nav {
     background: none;
     border: none;
 }
+
 .nav-links {
     display: flex;
     gap: 20px;
 }
+
 .nav-links a {
     color: #000;
     text-decoration: none;
@@ -40,13 +44,15 @@ nav {
     border-radius: 8px;
     transition: 0.3s;
 }
+
 .nav-links a:hover {
     background: #fff;
     color: #000;
 }
+
 .cta-button {
     display: inline-block;
-    background: linear-gradient(90deg, #ffcc00, #ff9900);
+    background: linear-gradient(90deg, #FFD700, #FF8C00);
     color: #000;
     padding: 14px 28px;
     border-radius: 8px;
@@ -54,7 +60,51 @@ nav {
     font-weight: bold;
     transition: transform 0.3s, background 0.3s;
 }
+
 .cta-button:hover {
-    background: linear-gradient(90deg, #ff9900, #ff6600);
+    background: linear-gradient(90deg, #FF8C00, #FF4500);
     transform: scale(1.1);
+}
+
+.hero {
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #FF8C00;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
 }
