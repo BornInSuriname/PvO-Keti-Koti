@@ -2,15 +2,33 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerij - PvO Keti Koti</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h2>Galerij</h2>
-    <div class="gallery-container">
-        <div class="gallery-item" onclick="openLightbox('images/foto1.jpg')">
-            <img src="images/foto1.jpg" alt="Keti Koti evenement">
-        </div>
-    </div>
+    <header>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="wie-zijn-wij.html">Wie Wij Zijn</a>
+                <a href="initiatieven.html">Onze Initiatieven</a>
+                <a href="keti-koti.html">Waarom Keti Koti?</a>
+                <a href="bijdragen.html">Hoe Jij Kan Bijdragen</a>
+                <a href="gallery.html">Galerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="donatie.html" class="cta-button">Doneer</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>Galerij</h1>
+        <p>Bekijk foto's van onze activiteiten en evenementen.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
+    </footer>
 </body>
 </html>
