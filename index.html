@@ -7,100 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="PvO Keti Koti - Bouwen aan inclusie en respect binnen GVB.">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: url('images/logo_pvo2.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            width: 100%;
-            z-index: 1000;
-            transition: background 0.3s;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .cta-button, .donate-button {
-            display: inline-block;
-            background: #ffcc00;
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, background 0.3s;
-            box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
-        }
-        .cta-button:hover, .donate-button:hover {
-            background: #e6b800;
-            transform: scale(1.1);
-            box-shadow: 0px 6px 20px rgba(255, 204, 0, 0.8);
-        }
-        .hero {
-            padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 50px auto;
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#over">Wie Wij Zijn</a>
-            <a href="#initiatieven">Onze Initiatieven</a>
-            <a href="#keti-koti">Waarom Keti Koti?</a>
-            <a href="#bijdragen">Hoe Jij Kan Bijdragen</a>
-            <a href="#gallery">Galerij</a>
-            <a href="#contact">Contact</a>
-            <a href="#donatie" class="donate-button">Doneer</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="wie-zijn-wij.html">Wie Wij Zijn</a>
+                <a href="initiatieven.html">Onze Initiatieven</a>
+                <a href="keti-koti.html">Waarom Keti Koti?</a>
+                <a href="bijdragen.html">Hoe Jij Kan Bijdragen</a>
+                <a href="gallery.html">Galerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="donatie.html" class="donate-button">Doneer</a>
+            </div>
         </nav>
     </header>
     <section class="hero">
         <h1>Bewustwording, Inclusiviteit & Respect bij GVB</h1>
         <p>Wij zetten ons in voor een werkcultuur waarin kennis, begrip en inclusiviteit centraal staan.</p>
-        <a href="#donatie" class="cta-button">Steun Ons</a>
-    </section>
-    <section id="donatie" class="donatie-sectie">
-        <h2>Steun Onze Missie</h2>
-        <p>Met jouw donatie help je PvO Keti Koti bij het realiseren van initiatieven die bijdragen aan een inclusieve samenleving.</p>
-        <a href="https://www.mollie.com/payments" class="donate-button">Doneer Nu</a>
+        <a href="donatie.html" class="cta-button">Steun Ons</a>
     </section>
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
