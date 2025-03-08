@@ -7,6 +7,7 @@ body {
     text-align: center;
     overflow-x: hidden;
     position: relative;
+    padding-top: 80px; /* Voegt extra ruimte toe boven de inhoud */
 }
 
 body::before {
@@ -32,18 +33,19 @@ body::before {
     }
 }
 
-nav {
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Achtergrondkleur header */
     padding: 15px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    height: 60px; /* Hoogte van de header */
 }
 
 .logo img {
@@ -106,6 +108,7 @@ nav {
     background: rgba(0, 0, 0, 0.6);
     position: relative;
     z-index: 1;
+    margin-top: 80px; /* Duwt de inhoud naar beneden */
 }
 
 .hero h1 {
@@ -120,6 +123,10 @@ nav {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+section {
+    margin-top: 80px; /* Duwt de inhoud naar beneden */
+}
+
 footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
@@ -127,6 +134,28 @@ footer {
     margin-top: 50px;
     position: relative;
     z-index: 1;
+}
+
+/* Stijl voor de "Terug naar Home" knop */
+.terug-naar-home {
+    display: inline-block;
+    background: linear-gradient(90deg, #FFD700, #FF8C00);
+    color: #000;
+    padding: 10px 20px; /* Kleinere padding */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px; /* Kleinere tekst */
+    transition: transform 0.3s, background 0.3s;
+    position: fixed; /* Vaste positie */
+    bottom: 20px; /* Afstand vanaf de onderkant */
+    right: 20px; /* Afstand vanaf de rechterkant */
+    z-index: 1000; /* Zorgt ervoor dat de knop boven andere content staat */
+}
+
+.terug-naar-home:hover {
+    background: linear-gradient(90deg, #FF8C00, #FF4500);
+    transform: scale(1.05);
 }
 
 /* Nieuwe stijlen voor contactknoppen */
@@ -174,7 +203,7 @@ footer {
     }
 
     .logo img {
-        height: 50px; /* Groter logo voor mobiel */
+        height: 50px; /* Kleinere logo voor mobiel */
     }
 
     .contact-buttons {
