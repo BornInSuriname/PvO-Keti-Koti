@@ -4,10 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PvO Keti Koti - Bewustwording, Inclusiviteit & Respect bij GVB</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="PvO Keti Koti - Bouwen aan inclusie en respect binnen GVB.">
     <script defer src="script.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        .nav-links a:hover {
+            background: #fff;
+            color: #000;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/logo_pvo2.png') no-repeat center center/cover;
+            background-size: contain;
+            position: relative;
+            z-index: 1;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .hero h1, .hero p, .cta-button {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.6);
+        }
+        .cta-button:hover {
+            background: linear-gradient(90deg, #ff9900, #ff6600);
+            transform: scale(1.1);
+            box-shadow: 0px 6px 20px rgba(255, 102, 0, 0.8);
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,10 +146,17 @@
     </header>
     <section class="hero">
         <h1>Bewustwording, Inclusiviteit & Respect bij GVB</h1>
+        <p>Wij zetten ons in voor een werkcultuur waarin kennis, begrip en inclusiviteit centraal staan.</p>
         <a href="donatie.html" class="cta-button">Steun Ons</a>
     </section>
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 </body>
 </html>
