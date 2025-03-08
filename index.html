@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
     <header class="cultural-header">
         <div class="header-content">
             <h1>PvO Keti Koti</h1>
@@ -16,19 +15,16 @@
         </div>
     </header>
 
-    <!-- Navigatie -->
     <nav class="dynamic-nav">
         <a href="index.html">Home</a>
         <a href="wie-zijn-wij.html">Wie zijn wij</a>
         <a href="waarom-keti-koti.html">Waarom Keti Koti</a>
         <a href="initiatieven.html">Initiatieven</a>
-        <a href="index.html#gallery">Galerij</a>
+        <a href="#gallery">Galerij</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- Hoofdinhoud -->
     <main>
-        <!-- Hero Sectie -->
         <section class="cultural-hero">
             <div class="hero-content">
                 <h2>1 Juli 1863 - 1 Juli Nu</h2>
@@ -37,27 +33,36 @@
             </div>
         </section>
 
-        <!-- Galerij Sectie -->
         <section id="gallery" class="interactive-gallery">
             <h3>Onze Gemeenschap in Beeld</h3>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/gallery/herdenking.jpg" alt="Keti Koti Herdenking">
+                    <img src="images/gallery/event1.jpg" alt="Keti Koti Herdenking">
                     <div class="culture-overlay">
                         <p>Jaarlijkse Herdenking</p>
                     </div>
                 </div>
-                <!-- Voeg meer gallery items toe -->
+                <div class="gallery-item">
+                    <img src="images/gallery/event2.jpg" alt="Culturele optredens">
+                    <div class="culture-overlay">
+                        <p>Traditionele dansgroep</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/event3.jpg" alt="Gemeenschapsviering">
+                    <div class="culture-overlay">
+                        <p>Gemeenschapsviering</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="cultural-footer">
         <div class="footer-content">
             <div class="contact-section">
                 <a href="mailto:info@pvoketikoti.nl" class="modern-contact">
-                    <svg class="icon"><!-- Email SVG --></svg>
+                    <svg class="icon"><use href="images/icons/email-icon.svg"></use></svg>
                     Contact
                 </a>
             </div>
