@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerij - PvO Keti Koti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Galerij</a>
+        </nav>
+    </header>
+    <section id="gallery">
+        <h2>Galerij</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="openLightbox('images/foto1.jpg')">
+                <img src="images/foto1.jpg" alt="Keti Koti evenement">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('videos/video1.mp4', true)">
+                <video>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Je browser ondersteunt deze video niet.
+                </video>
+            </div>
+        </div>
+    </section>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img">
+        <video id="lightbox-video" controls></video>
+    </div>
+    <script>
+        function openLightbox(src, isVideo = false) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const video = document.getElementById('lightbox-video');
+
+            if (isVideo) {
+                img.style.display = 'none';
+                video.style.display = 'block';
+                video.src = src;
+            } else {
+                img.style.display = 'block';
+                video.style.display = 'none';
+                img.src = src;
+            }
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
