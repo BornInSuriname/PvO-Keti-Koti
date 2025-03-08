@@ -8,6 +8,76 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="PvO Keti Koti - Bouwen aan inclusie en respect binnen GVB.">
     <script defer src="script.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: url('images/logo_pvo2.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,5 +103,15 @@
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
