@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - PvO Keti Koti</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="wie-zijn-wij.html">Wie Wij Zijn</a>
+                <a href="initiatieven.html">Onze Initiatieven</a>
+                <a href="keti-koti.html">Waarom Keti Koti?</a>
+                <a href="bijdragen.html">Hoe Jij Kan Bijdragen</a>
+                <a href="gallery.html">Galerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="donatie.html" class="cta-button">Doneer</a>
+            </div>
         </nav>
     </header>
     <section>
-        <h2>Contact</h2>
-        <p>Neem contact met ons op voor vragen, suggesties of samenwerkingen.</p>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Naam" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <textarea name="message" placeholder="Bericht" required></textarea>
-            <button type="submit">Verstuur</button>
-        </form>
+        <h1>Contact</h1>
+        <p>Neem contact met ons op voor meer informatie.</p>
     </section>
     <footer>
         <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
