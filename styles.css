@@ -1,7 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url('images/logo_pvo2.png') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(135deg, #ff0000, #ffcc00, #008000);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -9,40 +8,43 @@ body {
     overflow-x: hidden;
 }
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     background: linear-gradient(90deg, #ffcc00, #ff9900);
     padding: 15px;
-    width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
 }
 .menu-toggle {
-    display: none;
     font-size: 24px;
     cursor: pointer;
+    color: white;
     background: none;
     border: none;
-    color: white;
-    padding: 10px;
 }
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 .nav-links a {
     color: #000;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 .nav-links a:hover {
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
-.cta-button, .donate-button {
+.cta-button {
     display: inline-block;
     background: linear-gradient(90deg, #ffcc00, #ff9900);
     color: #000;
@@ -51,10 +53,8 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.3s, background 0.3s;
-    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.6);
 }
-.cta-button:hover, .donate-button:hover {
+.cta-button:hover {
     background: linear-gradient(90deg, #ff9900, #ff6600);
     transform: scale(1.1);
-    box-shadow: 0px 6px 20px rgba(255, 102, 0, 0.8);
 }
