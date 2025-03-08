@@ -1,8 +1,4 @@
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-    }
+    const nav = document.querySelector('.nav-links');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
 }
