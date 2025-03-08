@@ -2,19 +2,40 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doneer - PvO Keti Koti</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Terug naar Home</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="wie-zijn-wij.html">Wie Wij Zijn</a>
+                <a href="initiatieven.html">Onze Initiatieven</a>
+                <a href="keti-koti.html">Waarom Keti Koti?</a>
+                <a href="bijdragen.html">Hoe Jij Kan Bijdragen</a>
+                <a href="gallery.html">Galerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="donatie.html" class="cta-button">Doneer</a>
+            </div>
         </nav>
     </header>
     <section>
         <h1>Steun Onze Missie</h1>
-        <p>Met jouw donatie help je bij het realiseren van projecten en initiatieven.</p>
-        <a href="#" class="cta-button">Doneer Nu</a>
+        <div class="donatie-optie">
+            <h3>Eenmalige Donatie</h3>
+            <button class="bedrag-knop" data-bedrag="10">€10</button>
+            <button class="bedrag-knop" data-bedrag="25">€25</button>
+            <button class="bedrag-knop" data-bedrag="50">€50</button>
+            <input type="number" id="aangepast-bedrag" placeholder="Ander bedrag">
+        </div>
+        <a href="https://jouw-betalingsprovider.nl" class="cta-button">Veilig Doneren</a>
     </section>
+    <footer>
+        <p>&copy; 2025 PvO Keti Koti. Samen bouwen we aan een werkomgeving van respect en inclusie.</p>
+    </footer>
 </body>
 </html>
