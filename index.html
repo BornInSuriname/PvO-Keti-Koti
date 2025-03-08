@@ -14,8 +14,7 @@
         }
         body {
             font-family: 'Montserrat', sans-serif;
-            background: url('images/logo_pvo2.png') no-repeat center center fixed;
-            background-size: cover;
+            background: #1a1a1a;
             color: #fff;
             margin: 0;
             padding: 0;
@@ -33,6 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
         }
         .menu-toggle {
             display: none;
@@ -45,17 +45,66 @@
         }
         .nav-links {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
         .nav-links a {
             color: #000;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 8px;
         }
         .nav-links a:hover {
-            color: #fff;
+            background: #fff;
+            color: #000;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/logo_pvo2.png') no-repeat center center/cover;
+            background-size: contain;
+            position: relative;
+            z-index: 1;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .hero h1, .hero p, .cta-button {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.6);
+        }
+        .cta-button:hover {
+            background: linear-gradient(90deg, #ff9900, #ff6600);
+            transform: scale(1.1);
+            box-shadow: 0px 6px 20px rgba(255, 102, 0, 0.8);
         }
         @media (max-width: 768px) {
             .menu-toggle {
@@ -91,7 +140,7 @@
                 <a href="bijdragen.html">Hoe Jij Kan Bijdragen</a>
                 <a href="gallery.html">Galerij</a>
                 <a href="contact.html">Contact</a>
-                <a href="donatie.html" class="donate-button">Doneer</a>
+                <a href="donatie.html" class="cta-button">Doneer</a>
             </div>
         </nav>
     </header>
@@ -106,11 +155,7 @@
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-            }
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </body>
