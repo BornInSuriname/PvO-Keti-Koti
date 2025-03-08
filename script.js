@@ -1,4 +1,11 @@
 function toggleMenu() {
     const nav = document.querySelector('.nav-links');
-    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    nav.classList.toggle('active');
 }
+
+document.addEventListener('click', (e) => {
+    const nav = document.querySelector('.nav-links');
+    if (!e.target.closest('nav')) {
+        nav.classList.remove('active');
+    }
+});
