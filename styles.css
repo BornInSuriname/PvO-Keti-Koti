@@ -47,7 +47,7 @@ nav {
 }
 
 .logo img {
-    height: 50px; /* Pas de hoogte aan naar wens */
+    height: 60px; /* Groter logo voor desktop */
     width: auto;
     transition: transform 0.3s;
 }
@@ -129,6 +129,30 @@ footer {
     z-index: 1;
 }
 
+/* Nieuwe stijlen voor contactknoppen */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cta-button.email-button {
+    background: linear-gradient(90deg, #D44638, #EA4335);
+}
+
+.cta-button.whatsapp-button {
+    background: linear-gradient(90deg, #25D366, #128C7E);
+}
+
+.cta-button.email-button:hover {
+    background: linear-gradient(90deg, #EA4335, #D44638);
+}
+
+.cta-button.whatsapp-button:hover {
+    background: linear-gradient(90deg, #128C7E, #25D366);
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -150,7 +174,13 @@ footer {
     }
 
     .logo img {
-        height: 40px; /* Kleinere logo voor mobiel */
+        height: 50px; /* Groter logo voor mobiel */
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
 
