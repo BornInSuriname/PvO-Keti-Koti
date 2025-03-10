@@ -49,7 +49,7 @@ header {
 }
 
 .logo img {
-    height: 60px; /* Groter logo voor desktop */
+    height: 80px; /* Groter logo voor desktop */
     width: auto;
     transition: transform 0.3s;
 }
