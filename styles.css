@@ -7,7 +7,7 @@ body {
     text-align: center;
     overflow-x: hidden;
     position: relative;
-    padding-top: 80px; /* Voegt extra ruimte toe boven de inhoud */
+    padding-top: 70px; /* Voegt extra ruimte toe boven de inhoud */
 }
 
 body::before {
